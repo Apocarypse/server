@@ -686,6 +686,12 @@ public:
     void  updateAttachments();
     void  reduceBurden(float percentReduction, sol::object const& intReductionObj);
 
+    int8 GetActiveRunes();
+    int32 removeOldestRune();
+    int32 removeAllRunes();
+    int32 getMaxRuneElement();
+    int32 getMaxRuneElementCount();
+
     // Mob Entity-Specific
     void   setMobLevel(uint8 level);
     uint8  getSystem();
