@@ -16,6 +16,14 @@ ability_object.onAbilityCheck = function(player, target, ability)
 end
 
 ability_object.onUseAbility = function(player, target, ability)
+
+    local runeList = player:getMaxRune()
+    local runeCount = runeList.count
+
+    if runeCount >= 3 then
+        player:removeOldestRune()
+    end
+
     target:addStatusEffect(xi.effect.IGNIS, 10, 0, 300)
 
     return xi.effect.IGNIS
